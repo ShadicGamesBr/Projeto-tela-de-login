@@ -35,13 +35,21 @@ main{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 #imagem{
+    animation: colorido 60s infinite linear;
     image-rendering: pixelated;
     background: url(../imagens/background.gif), no-repeat;
-    filter: hue-rotate(200deg);
     background-size: cover;
     height: 200px;
     background-position: center center;
     display: block;
+}
+@keyframes colorido {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
 }
 #formulario{
     padding: 10px;
